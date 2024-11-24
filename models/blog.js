@@ -1,38 +1,23 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+document.querySelector('#new-post-form').addEventListener('submit', async (event) => {
+  event.preventDefault();
 
-class blog extends Model {}
+  const title = document.querySelector('#post-title').value.trim();
+  const content = document.querySelector('#post-content').value.trim();
 
-blog.init(
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    content: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
-    },
-  },
-  {
-    sequelize,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'blog',
+  if (title && content) {
+    const response = await fetch('/api/blogs', {
+      method: 'POST',
+      body: JSON.stringify({ title, content }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      const result = await response.json(); // Handle the returned data
+      console.log(result); // Debugging output
+      document.location.replace('/dashboard');
+    } else {
+      alert('Failed to create post');
+    }
   }
-);
+});
 
-module.exports = blog;

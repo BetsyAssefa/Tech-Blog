@@ -12,6 +12,7 @@ document.querySelector('#new-post-form').addEventListener('submit', async (event
     });
 
     if (response.ok) {
+      // Redirect to the dashboard after successful post
       document.location.replace('/dashboard');
     } else {
       alert('Failed to create post');
