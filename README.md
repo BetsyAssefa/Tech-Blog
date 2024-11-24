@@ -78,8 +78,4 @@ Follow these steps to install and run the project locally:
 ## License
 This project is licensed under the MIT License.
 
-<<<<<<< HEAD
 -   Email: bitsietassefa5@gmail.com
-=======
-Email: bitsietassefa5@gmail.com
->>>>>>> 4d3928d2bda061d4493cba0b1d4d87fa903675ee
