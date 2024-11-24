@@ -1,0 +1,37 @@
+<main class="main-content">
+  <h1 class="display-4 text-primary mb-3">{{blog.title}}</h1>
+  <p class="text-muted mb-4">by {{blog.user.username}} on {{blog.createdAt}}</p>
+  <p class="lead">{{blog.content}}</p>
+
+  <!-- Comments Section -->
+  <section class="mt-5">
+    <h2 class="h4 text-secondary">Comments</h2>
+    {{#if blog.comments.length}}
+      {{#each blog.comments}}
+        <div class="comment my-3 p-3 border rounded shadow-sm">
+          <p class="mb-1"><strong>{{user.username}}</strong> said:</p>
+          <p>{{comment_text}}</p>
+          <p class="text-muted"><small>Posted on {{createdAt}}</small></p>
+        </div>
+      {{/each}}
+    {{else}}
+      <p>No comments yet. Be the first to comment!</p>
+    {{/if}}
+  </section>
+
+  <!-- Add Comment Form -->
+  {{#if logged_in}}
+    <form id="comment-form" class="mt-4">
+      <div class="form-group">
+        <label for="comment">Add a Comment:</label>
+        <textarea id="comment" name="comment" class="form-control" rows="3" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Comment</button>
+    </form>
+  {{else}}
+    <p><a href="/login">Log in</a> to comment on this post.</p>
+  {{/if}}
+</main>
+
+<!-- Comment Script -->
+<script src="/js/comment.js"></script>

@@ -1,0 +1,107 @@
+/* General Styling */
+body {
+    background-color: #a8c3a0; /* Fern Mist */
+    font-family: 'Arial', sans-serif;
+    color: #333333; /* Darker text color for better contrast */
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #333; /* Dark navbar background for contrast */
+  }
+  
+  .navbar-nav {
+    flex-direction: row;
+  }
+  
+  .nav-item {
+    margin-right: 15px;
+  }
+  
+  /* Navbar Links */
+  .nav-link {
+    color: #a8c3a0 !important; /* Fern Mist color for navbar links */
+    font-weight: bold;
+  }
+  
+  .nav-link:hover {
+    color: #ffffff !important; /* White on hover for contrast */
+  }
+  
+  /* Tech Blog 3D Box */
+  .navbar-brand-box {
+    background-color: #a8c3a0; /* Fern Mist */
+    color: #333333; /* Black text */
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(50, 50, 50, 0.3);
+  }
+  
+  .navbar-brand-box .navbar-brand {
+    font-weight: bold;
+    font-size: 1.75rem;
+    color: #333333; /* Black text inside the box */
+    text-shadow: none;
+    text-decoration: none;
+  }
+  
+  /* Title Box Styling */
+  .title-box {
+    background-color: #333; /* Same as navbar background */
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .title-box .card-title a {
+    color: #ffffff; /* White text for contrast */
+    text-decoration: none;
+  }
+  
+  .title-box .card-title a:hover {
+    color: #dcdcdc; /* Light gray on hover */
+  }
+  
+  .container {
+    max-width: 800px;
+  }
+  
+  /* Main Content Styling */
+  .main-content {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .display-4 {
+    color: #333333;
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: #ab6060;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Buttons */
+  .btn-outline-primary {
+    border-color: #9bc7f6;
+    color: #007bff;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #ffffff;
+  }

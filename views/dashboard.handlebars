@@ -1,0 +1,25 @@
+<main class="main-content">
+  <h1 class="text-center mb-4">Your Dashboard</h1>
+  <div class="text-center mb-3">
+    <button class="btn btn-success" onclick="location.href='/new-post'">Create New Post</button>
+  </div>
+  <div class="row">
+    {{#each blogs}}
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h2 class="card-title"><a href="/blog/{{id}}" class="text-primary">{{title}}</a></h2>
+            <p class="card-text">{{content}}</p>
+            <button class="btn btn-warning" onclick="location.href='/edit/{{id}}'">Edit</button>
+          </div>
+        </div>
+      </div>
+    {{else}}
+      <p class="text-center col-12">You haven't created any blog posts yet.</p>
+    {{/each}}
+  </div>
+</main>
+
+
+<!-- Blog Post Script -->
+<script src="/js/blog.js"></script>
