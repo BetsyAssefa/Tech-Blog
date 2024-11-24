@@ -78,12 +78,4 @@ Follow these steps to install and run the project locally:
 ## License
 This project is licensed under the MIT License.
 
-## Screenshots
-### Homepage
-![Homepage](https://via.placeholder.com/800x400.png?text=Screenshot+Homepage)
-
-### Dashboard
-![Dashboard](https://via.placeholder.com/800x400.png?text=Screenshot+Dashboard)
-
-
--   Email: bitsietassefa5@gmail.com
+Email: bitsietassefa5@gmail.com
